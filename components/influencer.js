@@ -84,18 +84,18 @@ class influencer extends Component {
           <Row style={{ marginBottom: 80 }}>
             <Col md={12} >
               <h2>Манай инфлюнсерүүд</h2>
-              <p style={{letterSpacing:'1px', fontWeight:'600',opacity:"0.7" }}>Бид хамгийн шилдэгүүдийг танд санал болгоно</p>
+              <p style={{ fontWeight:'600',opacity:"0.7" }}>Бид хамгийн шилдэгүүдийг танд санал болгоно</p>
             </Col>
           </Row>
           <div>
             <Row style={{ marginBottom: 80 }}>
               <Col md={4} >
                   <div className="infImg">
-                    <img src={require('../image/main1.jpg')}/>
-                    <div className="myAbs">
-                          <h6>КОНТЕНТ ШЭЙР </h6>
-                          <p> Танай байгууллагын бэлдсэн сурталчилгаа, сошиал контентийг зорилтот бүлгийн хүмүүст нөлөө бүхий инфлюнсерүүдээр сурталчлах </p>
-                    </div>
+                       <img src={require('../image/main1.jpg')}/>
+                        <div className="myAbs">
+                              <h6>КОНТЕНТ ШЭЙР </h6>
+                              <p> Танай байгууллагын бэлдсэн сурталчилгаа, сошиал контентийг зорилтот бүлгийн хүмүүст нөлөө бүхий инфлюнсерүүдээр сурталчлах </p>
+                        </div>
                   </div>
               </Col>
             </Row>

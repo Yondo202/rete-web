@@ -1,37 +1,47 @@
 import React, { Component } from 'react'
+import SliderSlick from "react-slick";
+
+
+
 
 export class Slider extends Component {
     render() {
+            var settings = {
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+            };
         return (
-            <div id="Swiper" style={{marginBottom:120}}>
-                    <div> 
-                        <img style={this.props.sliderHeight}  src={require('../image/slider1.jpg')} />
-                        {/* <img style={this.props.sliderHeight || {}}  src={require(`../img/slider2.jpg`)} />
-                        <img style={this.props.sliderHeight || {}}  src={require(`../img/slider3.jpg`)} /> */}
-                            {/* <div className="absolute-this">
-                            <h3>хйхйхйхйх</h3>
-                            <p>Бидэнтэй нэгдэх</p>
-                            <button>Дэлгэрэнгүй</button>
-                     </div> */}
+            <div className="sliderPar">
+                 <SliderSlick {...settings} id="SliderSlick">
+                    <div >
+                        <img src={require('../image/bg1.jpg')} />
+                        {/* <div className="slideText">
+                            <h1>Бид таны бизнесийг өсгөнө</h1>
+                            <button>Цааш нь...</button>
+                        </div> */}
                     </div>
+
+                    <div>
+                    <img src={require('../image/bg2.jpg')} />
+                    {/* <h3>2</h3> */}
+                    </div>
+
+                    <div>
+                          <img src={require('../image/bg1.jpg')} />
+                    {/* <h3>3</h3> */}
+                    </div>
+                  </SliderSlick>
             </div>
+           
         )
     }
 }
 
 
-const params = {
-    spaceBetween: 30,
-    effect: 'fade',
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-    },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false
-    }
-}
 
 
 export default Slider
