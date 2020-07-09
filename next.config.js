@@ -13,5 +13,5 @@ module.exports = withSass({
   cssModules: true
 });
 
-  module.exports = withOptimizedImages( { } );
+module.exports = withOptimizedImages( { } );
   
