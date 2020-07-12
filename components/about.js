@@ -9,9 +9,9 @@ class about extends Component {
           <div className="aboutCover" style={{ backgroundImage: `url(${require("../image/bg2.jpg")})` }}>
           </div>
               <div className="textPar">
-              <h1>{this.props.medeelel.Title}</h1>
-              <h5>{this.props.medeelel.SmallTitle}</h5>
-              <p>{this.props.medeelel.Description}</p>
+              <h1>Танилцуулга</h1>
+              {/* <h5>{this.props.medeelel.SmallTitle}</h5>
+              <p>{this.props.medeelel.Description}</p> */}
             </div>
       </div>
       

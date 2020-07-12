@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Rete-web</title>
+        <title>Rete-agency</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
         <link rel="icon" href="/logo.png" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"></link>
@@ -18,6 +18,10 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet"></link>
+
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet"></link>
       </Head>
           <Layout>
             <Slider />

@@ -1,7 +1,10 @@
 $myFontFamily: "Open Sans", sans-serif;
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
+    // font-family: "Lato", sans-serif;
+    // font-family: 'Roboto Mono', monospace !important;
+    // font-family: 'Merriweather', serif !important;
+    font-family: 'Heebo', sans-serif !important;
+    font-weight: 500 !important;
     letter-spacing: 0px;
     overflow-x: hidden;
     &::-webkit-scrollbar {
@@ -153,7 +156,7 @@ body {
             position: fixed;
             width: 100%;
             height: 100vh;
-            background: #2c3e50;
+            background: rgb(23, 23, 23);
             top:70px;
             left: -100%;
             text-align: center;
@@ -163,6 +166,7 @@ body {
                 margin: 50px 0px;
                 line-height: 30px;
                 a{
+                    color: white;
                     font-size: 20px;
                     &:hover{
                         color: wheat;
@@ -442,6 +446,18 @@ body {
         }
     }
 }
+.my-facebook-button-class{
+    background-color: #fbb03b;
+    padding: 5px 10px;
+    border-radius: 80px;
+    border-style: none;
+    font-weight: 600;
+    transition: padding 0.3s;
+    &:hover{
+        color: wheat;
+        padding: 5px 16px;
+    }
+}
 
 .aboutPar {
     margin-bottom: 150px;
@@ -469,6 +485,13 @@ body {
         h5 {
             padding-bottom: 20px;
         }
+        
+    }
+}
+
+.Profile{
+    img{
+        border-radius: 50%;
     }
 }
 
@@ -589,6 +612,55 @@ body {
 }
 
 .infTopPar {
+
+    .userCardPar{
+        // border: 2px solid black;
+        border-radius: 10px;
+
+
+        -webkit-box-shadow: 1px 7px 27px -7px rgba(0,0,0,0.75);
+        -moz-box-shadow: 1px 7px 27px -7px rgba(0,0,0,0.75);
+        box-shadow: 1px 7px 27px -7px rgba(0,0,0,0.75);
+        margin-bottom: 80px;
+        .userCard {
+            padding: 20px 0px;
+            border-right: 2px solid rgba(0, 0, 0, 0.2);
+            h5{
+                padding-bottom: 20px;
+                font-family: $myFontFamily;
+                font-weight: 600;
+            }
+            svg{
+                font-size: 50px ;
+                margin-bottom: 50px;
+            }
+            .mysvg{
+                color: rgb(20, 20, 189);
+            }
+            .button{
+                border-style: double;
+                border: solid 1px rgba(0, 0, 0, 0.3);
+                background-color: #fbb03b;
+                padding: 0px 25px;
+                color:white;
+                border-radius: 10px;
+                padding: 0px 10px;
+                transition: all 0.5s;
+                &:hover{
+                    border-style: double;
+                    border: solid 1px rgba(0, 0, 0, 0.3);
+                    background-color: #fbb03b;
+                    padding: 0px 25px;
+                    color:white;
+                    -webkit-box-shadow: 1px 7px 27px -5px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 1px 7px 27px -5px rgba(0,0,0,0.75);
+                    box-shadow: 1px 7px 27px -5px rgba(0,0,0,0.75);
+                }
+            }
+        }
+    }
+    
+
     .infPar {
         margin-bottom: 150px;
         .infCover {
@@ -650,35 +722,56 @@ body {
         }
     }
     .infImg {
+        position: relative;
         text-align: center;
         height: 650px;
+        // width: 100%;
 
         transition: bottom 0.9s;
         &:hover {
-            img {
-                opacity: 0.6;
+
+            .imgBack{
+                background-color: rgba(0, 0, 0, 0.9);
+                z-index: -2;
+                .img {
+                    z-index: -1;
+                    opacity: 0.2;
+                }
             }
+           
             transition: bottom 0.7s;
             .myAbs {
+                 transition: all 0.4s;
                 bottom: 300px;
+                z-index: 200;
             }
             h6 {
                 opacity: 0;
+                color: white;
             }
             p {
                 opacity: 0;
+                color: white;
+                font-size: 16px;
             }
         }
-        img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            z-index: -1;
+        .imgBack{
+            .img {
+                width: 100%;
+                height: 480px;
+                // object-fit: cover;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                z-index: -1;
+            }
         }
+      
 
         .myAbs {
             position: absolute;
             bottom: 0px;
+            margin-left: 45px;
             h6 {
                 font-weight: 600;
                 opacity: 0.8;
@@ -689,12 +782,14 @@ body {
                 align-items: center;
                 font-size: 14px;
                 opacity: 0.7;
-                width: 85%;
-                padding-left: 16px;
+                width: 89%;
             }
         }
     }
 }
+
+
+
 
 @media only screen and (max-width: 1000px) {
     .foodPar {

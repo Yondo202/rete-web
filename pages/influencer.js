@@ -3,7 +3,9 @@ import Layout from '../components/layout';
 import Head from 'next/head'
 import Influencer from '../components/influencer'
 
+
 class influencer extends Component {
+
   render() {
     return (
 
