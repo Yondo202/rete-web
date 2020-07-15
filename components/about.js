@@ -10,8 +10,8 @@ class about extends Component {
           </div>
               <div className="textPar">
               <h1>Танилцуулга</h1>
-              {/* <h5>{this.props.medeelel.SmallTitle}</h5>
-              <p>{this.props.medeelel.Description}</p> */}
+              <h5>{this.props.medeelel.SmallTitle}</h5>
+              <p>{this.props.medeelel.Description}</p>
             </div>
       </div>
       
