@@ -1,4 +1,11 @@
 $myFontFamily: "Open Sans", sans-serif;
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
 body {
     // font-family: "Lato", sans-serif;
     // font-family: 'Roboto Mono', monospace !important;
@@ -511,7 +518,7 @@ body {
         .textPar {
             z-index: 2;
             position: absolute;
-            top: 30%;
+            top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 65%;
@@ -676,7 +683,7 @@ body {
         .textPar {
             z-index: 2;
             position: absolute;
-            top: 30%;
+            top: 36%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 65%;
@@ -788,10 +795,186 @@ body {
     }
 }
 
+.BackInfPar{
+    background-color:rgba(129, 230, 255, 0.1);
+    height: 100vh;
+        // font-family: "Lato", sans-serif;
+    // font-family: 'Roboto Mono', monospace !important;
+    // font-family: 'Merriweather', serif !important;
+    // font-family: 'Heebo', sans-serif !important;
+    font-family: 'Roboto', sans-serif;
+    .headerPar{
+        background-color: white;
+        width: 100%;
+        height: 70px;
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 95%;
+            padding-left: 30px;
+            align-items: center;
+            padding-top: 11px;
+            .flex1{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                .flex1Child{
+                    margin-left: 38px;
+                    font-family: $myFontFamily;
+                    h3{
+                        margin-bottom: 0px;
+                        font-size: 22px;
+                        font-weight: 600;
+                    }
+                    p{
+                        font-size: 11px;
+                        opacity: 0.7;
+                        margin-bottom: 0px;
+                    }
+                }
+                svg{
+                    font-size: 24px;
+                    cursor: pointer;
+                }
+            }
+
+            .flex2{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .flex2Child2{
+                   padding-right: 10px;
+                   padding-top: 2px;
+                   h6{
+                       margin-bottom: 0px;
+                       font-size: 13px;
+                   }
+                   p{
+                       font-size: 10px;
+                       opacity: 0.7;
+                       margin-bottom: 0px;
+                   }
+                }
+                img{
+                    height: 40px;
+                    width: 40px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+            
+           
+        }
+    }
+    .BodyPar{
+        .smMenu{
+            h6{
+                font-size: 13px;
+                font-weight: 500;
+            }
+        }
+
+        .ScrollPar{
+            overflow-y: scroll;
+            height: 78vh;
+            &::-webkit-scrollbar {
+                width: 3px;
+              }
+              
+              /* Track */
+              &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey; 
+                border-radius: 10px;
+              }
+               
+              /* Handle */
+              &::-webkit-scrollbar-thumb {
+                background: #fbb03b ; 
+                border-radius: 10px;
+              }
+              
+              /* Handle on hover */
+              &::-webkit-scrollbar-thumb:hover {
+                background: #fbb03b; 
+              }
+
+
+            .contentPar{
+                z-index: 2;
+                background-color: white;
+                padding: 5px 10px;
+                width: 90%;
+                border-radius: 10px;
+                -webkit-box-shadow: 1px 6px 22px -7px rgba(0,0,0,0.75);
+                -moz-box-shadow: 1px 6px 22px -7px rgba(0,0,0,0.75);
+                box-shadow: 1px 6px 22px -7px rgba(0,0,0,0.75);
+                margin-bottom: 30px;
+                span{
+                    font-size: 14px;
+                    opacity: 0.6;
+                }
+                .flexPar{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .flex1{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        align-items: center;
+                        padding-left: 30px;
+                        svg{
+                            font-size: 30px;
+                        }
+                        .flex1Text{
+                            
+                            padding-left: 20px;
+                            h6{
+                                margin-bottom: 0px;
+                            }
+                        }
+                    }
+                    .flex2{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        button{
+                            font-size: 12px;
+                            width: 100px;
+                            border-radius: 8px;
+                            border-style: none;
+                            padding: 2px 5px;
+                            margin-bottom: 12px;
+                            color:white;
+                        }
+                    }
+                }
+            }
+        }
+        .NextMenu{
+            height: 80vh;
+            width: 50%;
+            background-color: rgb(2, 18, 46);
+        }
+        
+    }
+}
 
 
 
-@media only screen and (max-width: 1000px) {
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1200px) {
     .foodPar {
         .footEnd {
             // width: 1498.89px;
@@ -823,14 +1006,17 @@ body {
             }
         }
     }
-    .companyPar {
-        .textPar {
-            top: 80px;
-            p {
-                display: none;
+    .companyTopPar{
+        .companyPar {
+            .textPar {
+                top: 300px;
+                p {
+                    display: none;
+                }
             }
         }
     }
+    
     .infPar {
         .textPar {
             p {
@@ -844,54 +1030,4 @@ body {
     body {
         overflow-x: hidden;
     }
-    // .Headerghost {
-    //     height: 80px !important;
-    //     .headPar {
-    //         .logo {
-    //             height: 80px;
-    //             padding: 12px 0px;
-    //             img {
-    //                 height: 100%;
-    //             }
-    //         }
-    //         .menumobile {
-    //             display: flex;
-    //             height: 100%;
-    //             justify-content: flex-end;
-    //             align-items: center;
-    //             svg {
-    //                 font-size: 40px;
-    //                 &:hover {
-    //                     cursor: pointer;
-    //                 }
-    //             }
-    //         }
-    //         .menu {
-    //             display: none;
-    //         }
-    //     }
-    //     .menumobilebody {
-    //         position: absolute;
-    //         width: 100%;
-    //         left: 100%;
-    //         height: calc(100vh - 80px);
-    //         background-color: white;
-    //         text-align: center;
-    //         display: flex;
-    //         flex-direction: column-reverse;
-    //         padding-bottom: 10vw;
-    //         transition: 0.3s ease;
-    //         .menu1 {
-    //             display: block;
-    //             width: 100%;
-    //             // flex: 1;
-    //             display: flex;
-    //             justify-content: center;
-    //             align-items: center;
-    //             font-family: $myFontFamily;
-    //             flex-direction: column;
-    //             list-style-type: none;
-    //         }
-    //     }
-    // }
 }

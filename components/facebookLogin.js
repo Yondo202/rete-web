@@ -29,6 +29,13 @@ export class facebookLogin extends Component {
                 });
       }
 
+
+
+    //   onLogout() {
+    //       console.log(window.FB)
+    //     window.FB.logout()
+    // }
+
     render() {
         let facebookData;
         this.state.auth ? 
@@ -44,9 +51,10 @@ export class facebookLogin extends Component {
                 <h5>Сурталчилах</h5>
                 <img style={{borderRadius:"50%"}} src={this.state.picture} alt={this.state.name} /><br/>
                 <h6 >{this.state.name}</h6><br/>
-                    <Link href="/postshare">
+                    <Link href="/content">
                         <button type="button" className="button">Пост шэйрлэх</button>
                     </Link>
+                    {/* <a href="#" onClick={(e)=>{e.preventDefault(); window.FB.logout()}}>logout</a> */}
               </div>
             ) :
             facebookData = (
@@ -64,7 +72,7 @@ export class facebookLogin extends Component {
                     size="small"
                     cssClass="my-facebook-button-class"
                     />
-                  </div>
+                </div>
                
             )
 
