@@ -4,8 +4,11 @@ import About from './about'
 import Chances from '../components/chances'
 import Slider from '../components/slider'
 import Intro from '../components/intro'
+import Axios from 'axios'
 
-export default function Home() {
+export default function Home(props) {
+  // console.log(props.data);
+  console.log(props.intro);
   return (
     <div>
       <Head>
@@ -24,8 +27,8 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet"></link>
       </Head>
           <Layout>
-            <Slider />
-            <Intro />
+            <Slider SlideData={props.data} />
+            <Intro  introData={props.intro} />
             <Chances />
               {/* <About />
               <Fruit /> */}
@@ -33,3 +36,10 @@ export default function Home() {
     </div>
   )
 }
+
+export async function getServerSideProps(){
+  const request = await Axios('http://localhost:1337/sliders');
+  const requestIntro = await Axios('http://localhost:1337/intro');
+  return {props:{data: request.data, intro: requestIntro.data}};
+}
+

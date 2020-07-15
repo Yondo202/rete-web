@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { GiSupersonicArrow, GiStairsGoal,GiMirrorMirror,GiSwordsPower } from 'react-icons/gi';
+import { GiSupersonicArrow, GiStairsGoal, GiMirrorMirror, GiSwordsPower } from 'react-icons/gi';
 import { AiFillDashboard } from 'react-icons/Ai';
-import {MdPhotoSizeSelectLarge} from 'react-icons/md';
-import {TiSocialYoutubeCircular} from 'react-icons/ti'
+import { MdPhotoSizeSelectLarge } from 'react-icons/md';
+import { TiSocialYoutubeCircular } from 'react-icons/ti'
 
 
 class company extends Component {
     render() {
+        const data = this.props.CompHead
+        console.log(data.body1, "hehehe");
         return (
             <div className="companyTopPar">
                 <div className="companyPar">
-                    <div className="companyCover" style={{ backgroundImage: `url(${require("../image/bg2.jpg")})` }}>
+                    <div className="companyCover" style={{ backgroundImage: `url(${require("../image/bg1.jpg")})` }}>
 
 
                     </div>
                     <div className="textPar">
-                        <h1>Бизнесээ рекламдах амархан боллоо</h1>
-                        <h5>20 жилийн дараа Та өнөөдөр илүү хичээгээгүйд л харамсана. Тиймээс, эрэл хий, мөрөөд, нээж илрүүл - Mark Twain-</h5>
-                        <p>Инфлюнсэр маркетинг нь уламжлалт сурталчилгааны арга дээр орчин үеийн контент суурьтай маркетингийг ашигланщдаг бөгөөд инфлюснэр болон олон нийтийн
-                        цахим сүлжээнд олон дагагчтай, тухайн салбартаа эксперт гэж тооцогддог хүмүүсээр бараа бүтээгдэхүүн, үйлчилгээгээ сурталчлах, дэмжлэг авах замаар ажилладаг олон нийтийн цахим
-                          сүлжээний маркетингийн нэг төрөл юм.</p>
+                        <h1>{data.head.Title}</h1>
+                        <h5>{data.head.SmTitle}</h5>
+                        <p>{data.head.Desc}</p>
                     </div>
 
                 </div>
@@ -30,7 +30,7 @@ class company extends Component {
                             <h2>Санал болгож буй боломжууд</h2>
                         </Col>
                     </Row>
-                    <Row style={{marginBottom:100}}>
+                    <Row style={{ marginBottom: 100 }}>
                         <Col md={4} style={{ paddingLeft: 0, paddingRight: 0 }}>
                             <div className="Box">
                                 <GiSupersonicArrow />
@@ -79,60 +79,68 @@ class company extends Component {
                         </Col>
                     </Row>
 
-                    
-                             <Row style={{ marginBottom: 80 }}>
-                                <Col md={12} >
-                                    <h2>Үр дүнгээс хамаарсан төлбөр төлөлт</h2>
-                                </Col>
-                            </Row>
+
+                    <Row style={{ marginBottom: 80 }}>
+                        <Col md={12} >
+                            <h2>Үр дүнгээс хамаарсан төлбөр төлөлт</h2>
+                        </Col>
+                    </Row>
                 </Container>
 
-                
+
                 <div className="imagePar" >
                     <Container>
-                            <Row style={{marginBottom:100, paddingBottom:100}}>
-                                <Col md={4}>
-                                        <div className="imgBorder" style={{ textAlign: "center" }}>
-                                            <img src={require('../image/inf2.jpg')} />
-                                        </div>
-                                        <div>
-                                            <p className="title">Дагагчийн тоо</p>
-                                            <p className="desc">Инфлюнсерийн дагагчийн тооноос хамаарч төлбөр бодогдох систем өөрчлөгдөх</p>
-                                        </div>
+                        <Row style={{ marginBottom: 100, paddingBottom: 100 }}>
+
+
+                            {data.body1.map((el, i) => {
+                                return(
+                                    <Col md={4} key={i}>
+                                    <div className="imgBorder" style={{ textAlign: "center" }}>
+                                        <img src={`http://localhost:1337${el.img.url}`} />
+                                    </div>
+                                    <div>
+                                        <p className="title">{el.Title}</p>
+                                        <p className="desc">{el.Desc}</p>
+                                    </div>
                                 </Col>
-                                <Col md={4}>
-                                        <div className="imgBorder" style={{ textAlign: "center" }}>
-                                            <img src={require('../image/inf2.png')} />
-                                        </div>
-                                        <div>
-                                            <p className="title">Engagement тоо</p>
-                                            <p className="desc">Инфлюнсерийн оруулсан постын хандалтаас хамаарч төлбөр бодогдох систем</p>
-                                        </div>
-                                </Col>
-                                <Col md={4}>
-                                        <div className="imgBorder" style={{ textAlign: "center" }}>
-                                            <img src={require('../image/inf2.jpg')} />
-                                        </div>
-                                        <div>
-                                            <p className="title">Дагагчийн тоо</p>
-                                            <p className="desc">Контент захиалгын дагуу хийсэн контентийн тоогоор төлбөр бодогдох систем</p>
-                                        </div>
-                                </Col>
-                            </Row>
-                           
+                                )   
+                            })}
+
+
+                            {/* <Col md={4}>
+                                <div className="imgBorder" style={{ textAlign: "center" }}>
+                                    <img src={require('../image/inf2.png')} />
+                                </div>
+                                <div>
+                                    <p className="title">Engagement тоо</p>
+                                    <p className="desc">Инфлюнсерийн оруулсан постын хандалтаас хамаарч төлбөр бодогдох систем</p>
+                                </div>
+                            </Col>
+                            <Col md={4}>
+                                <div className="imgBorder" style={{ textAlign: "center" }}>
+                                    <img src={require('../image/inf2.jpg')} />
+                                </div>
+                                <div>
+                                    <p className="title">Дагагчийн тоо</p>
+                                    <p className="desc">Контент захиалгын дагуу хийсэн контентийн тоогоор төлбөр бодогдох систем</p>
+                                </div>
+                            </Col> */}
+                        </Row>
+
                     </Container>
-                     
+
                 </div>
 
-                    <Container className="start">
-                              <Row style={{marginBottom:100}}>
-                                <Col style={{textAlign:"center"}}>
-                                    <p>Та доорх эхлэх товчыг дарж шууд бүртгүүлэх болон манай маркетинг багтай дараах утсаар холбогдох боломжтой - 99119911</p>
-                                <button ><GiSwordsPower /> Эхлэх</button>
-                                </Col>
-                            </Row>
-                     </Container>
-                          
+                <Container className="start">
+                    <Row style={{ marginBottom: 100 }}>
+                        <Col style={{ textAlign: "center" }}>
+                            <p>Та доорх эхлэх товчыг дарж шууд бүртгүүлэх болон манай маркетинг багтай дараах утсаар холбогдох боломжтой - 99119911</p>
+                            <button ><GiSwordsPower /><a href="tel:99801406">Эхлэх</a> </button>
+                        </Col>
+                    </Row>
+                </Container>
+
             </div>
 
         );

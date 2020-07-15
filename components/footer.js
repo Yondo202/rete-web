@@ -72,7 +72,6 @@ class footer extends Component {
                 </div>
             </div>
 
-   
     );
   }
 }

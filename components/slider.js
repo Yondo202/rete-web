@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SliderSlick from "react-slick";
+import Link from 'next/link';
 
 
 
@@ -17,17 +18,25 @@ export class Slider extends Component {
         return (
             <div className="sliderPar">
                  <SliderSlick {...settings} id="SliderSlick">
-                 
-                    <div>
-                        <div className="slideText">
-                            <h1>Бид таны бизнесийг өсгөнө</h1>
-                            <button>Цааш нь...</button>
-                        </div>
-                        <img src={require('../image/bg1.jpg')}  />
-                    </div>
+
+                    {this.props.SlideData.map((el, i)=>{
+                        return(
+                            <div key={i}>
+                                <div className="slideText">
+                                    <h1>{el.Title}</h1>
+                                    <Link href="/influencer">
+                                         <button>Цааш нь...</button>
+                                    </Link>
+                                </div>
+                                <img src={`http://localhost:1337${el.SliderImg.url}`}  />
+                            </div>
+                        )
+                    })}
+
+                    
 
 
-                    <div>
+                    {/* <div>
                     <div className="slideText">
                             <h1>Бид таны бизнесийг өсгөнө</h1>
                             <button>Цааш нь...</button>
@@ -42,8 +51,7 @@ export class Slider extends Component {
                             <button>Цааш нь...</button>
                         </div>
                           <img src={require('../image/bg1.jpg')} />
-                    {/* <h3>3</h3> */}
-                    </div>
+                    </div> */}
                   </SliderSlick>
             </div>
            
