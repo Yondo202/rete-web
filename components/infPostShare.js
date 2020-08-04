@@ -29,7 +29,7 @@ export class infPostShare extends Component {
     state = {
         name: '',
         url: '',
-        email: ''
+        email: '',
 
     }
 
@@ -45,6 +45,7 @@ export class infPostShare extends Component {
     handleError = (error) => {
         this.setState({ error });
     }
+  
 
 
 
@@ -65,7 +66,7 @@ export class infPostShare extends Component {
                         </div>
                         <div className="flex2">
                             <div className="flex2Child2">
-                                <h6>Ak Yondo</h6>
+                                <h6>Дорж Гомбо</h6>
                                 <p>Инфлюнсэр</p>
                             </div>
                             <div>
@@ -155,12 +156,12 @@ export class infPostShare extends Component {
                         </Col>
                         <Col md={7} >
                             <div>
-                                {/* <FacebookShareButton url="https://web.facebook.com/zurhaizodiac/photos/a.759974834741483/759974864741480/?type=3&theater" style={{ width: 50, height: 50 }} >
+                                <FacebookShareButton url="https://web.facebook.com/Munkhtsetseg.Setgelzuich/posts/2753542264925298" style={{ width: 50, height: 50 }} >
                                     <FacebookIcon size={30} />
-                                    <FacebookShareCount url="https://web.facebook.com/zurhaizodiac/photos/a.759974834741483/759974864741480/?type=3&theater">
+                                    <FacebookShareCount url="https://web.facebook.com/Munkhtsetseg.Setgelzuich/posts/2753542264925298">
                                         {shareCount => <h1 className="myShareCountWrapper">{shareCount}</h1>}
                                     </FacebookShareCount>
-                                </FacebookShareButton> */}
+                                </FacebookShareButton>
 
 
                                 {/* <Iframe url="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FTheUnlockPodcast%2Fvideos%2F1914610742009776%2F&show_text=0"
@@ -172,7 +173,7 @@ export class infPostShare extends Component {
                                     position="relative" /> */}
 
 
-                                <FacebookProvider appId="321477018868791">
+                                {/* <FacebookProvider appId="321477018868791">
                                     <LoginButton
                                         scope="email"
                                         onCompleted={this.handleResponse}
@@ -183,7 +184,7 @@ export class infPostShare extends Component {
                                     <MessageUs messengerAppId="321477018868791" pageId="109664220778001" />
                                     <h1>{this.state.name}</h1>
 
-                                </FacebookProvider>
+                                </FacebookProvider> */}
 
                                 {/* <FacebookProvider appId="321477018868791">
                                     <Login

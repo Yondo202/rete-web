@@ -2,13 +2,19 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap'
 // import "animate.css/animate.min.css";
 import ScrollAnimation from 'react-animate-on-scroll';
+import Link from 'next/link';
 
 
 class chances extends Component {
+
     render() {
+        console.log(this.props.ChanceData, 'kakak');
+        console.log(this.props.ChanceData2, 'daadad22');
+        const data1 = this.props.ChanceData
+        const data2 = this.props.ChanceData2
         return (
             <div className="ChancePar">
-                <Container>
+                <Container >
                     <Row style={{ marginBottom: 60 }}>
                         <Col>
                             <h2 className="Title">Танд олгож буй боломжууд</h2>
@@ -19,84 +25,52 @@ class chances extends Component {
 
                         <Col md={6}>
                             <ScrollAnimation animateIn='bounceInLeft'
-                                >
+                            >
                                 <div className="content">
-                                    <h3>Контент бүтээлгэх</h3>
+                                    <h3>{data1.Title}</h3>
                                     <div className="line"></div>
-                                    <p>ow use Lorem Ipsum as their default model text, search for 'lorem ipsum' will uncover many web
-                                    sites still in their infancy.
-                                                    Various versions have evolved over the years, sometimes by accident, sometimes.</p>
-
-                                    <button type="button">Цааш нь...</button>
+                                    <p>{data1.Desc}</p>
+                                    <Link href="/company">
+                                        <button type="button">Цааш нь...</button>
+                                    </Link>
                                 </div>
                             </ScrollAnimation>
 
                         </Col>
 
-                        <Col md={6}>
-                            <ScrollAnimation 
-                            animateIn='fadeIn'
+                        <Col md={6} style={{ paddingLeft: 0 }}>
+                            <ScrollAnimation
+                                animateIn='fadeIn'
                                 animateOut='fadeOut'>
-                                <img src={require('../image/main1.jpg')} />
+                                <img src={`http://localhost:1337${data1.img.url}`} />
                             </ScrollAnimation>
                         </Col>
 
 
 
 
-
-                        
-
-                        <Col md={6}>
-                            <ScrollAnimation 
-                            animateIn='fadeIn'
-                                >
-                                <img src={require('../image/main1.jpg')} />
+                        <Col md={6} style={{ paddingRight: 0 }}>
+                            <ScrollAnimation
+                                animateIn='fadeIn'
+                            >
+                                <img src={`http://localhost:1337${data2.img.url}`} />
                             </ScrollAnimation>
                         </Col>
-
                         <Col md={6}>
                             <ScrollAnimation animateIn='bounceInRight'
-                                >
+                            >
                                 <div className="content">
-                                    <h3>Контент бүтээлгэх</h3>
+                                    <h3>{data2.Title}</h3>
                                     <div className="line"></div>
-                                    <p>ow use Lorem Ipsum as their default model text, search for 'lorem ipsum' will uncover many web
-                                    sites still in their infancy.
-                                                    Various versions have evolved over the years, sometimes by accident, sometimes.</p>
+                                    <p>{data2.Desc}</p>
 
-                                    <button type="button">Цааш нь...</button>
+                                    <Link href="/company">
+                                        <button type="button">Цааш нь...</button>
+                                    </Link>
                                 </div>
                             </ScrollAnimation>
                         </Col>
 
-
-
-                        <Col md={6}>
-                            <ScrollAnimation animateIn='bounceInLeft'
-                                >
-                                <div className="content">
-                                    <h3>Контент бүтээлгэх</h3>
-                                    <div className="line"></div>
-                                    <p>ow use Lorem Ipsum as their default model text, search for 'lorem ipsum' will uncover many web
-                                    sites still in their infancy.
-                                                    Various versions have evolved over the years, sometimes by accident, sometimes.</p>
-
-                                    <button type="button">Цааш нь...</button>
-                                </div>
-                            </ScrollAnimation>
-
-                        </Col>
-
-                        <Col md={6}>
-                            <ScrollAnimation 
-                            animateIn='fadeIn'
-                                >
-                                <img src={require('../image/main1.jpg')} />
-                            </ScrollAnimation>
-                        </Col>
-
-                        
                     </Row>
                 </Container>
             </div>

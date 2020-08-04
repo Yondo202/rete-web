@@ -10,11 +10,14 @@ export class Slider extends Component {
             var settings = {
                 dots: true,
                 infinite: true,
-                speed: 400,
+                speed: 900,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay: true,
+                autoplaySpeed: 4000,
             };
+
+            console.log(this.props.SlideData[0].SliderImg.url, 'hahahah')
         return (
             <div className="sliderPar">
                  <SliderSlick {...settings} id="SliderSlick">

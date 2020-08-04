@@ -8,7 +8,6 @@ import Axios from 'axios'
 
 export default function Home(props) {
   // console.log(props.data);
-  console.log(props.intro);
   return (
     <div>
       <Head>
@@ -29,7 +28,7 @@ export default function Home(props) {
           <Layout>
             <Slider SlideData={props.data} />
             <Intro  introData={props.intro} />
-            <Chances />
+            <Chances ChanceData={props.chance1} ChanceData2={props.chance2} />
               {/* <About />
               <Fruit /> */}
           </Layout>
@@ -40,6 +39,8 @@ export default function Home(props) {
 export async function getServerSideProps(){
   const request = await Axios('http://localhost:1337/sliders');
   const requestIntro = await Axios('http://localhost:1337/intro');
-  return {props:{data: request.data, intro: requestIntro.data}};
+  const requestChance1 = await Axios('http://localhost:1337/homechance-1');
+  const requestChance2 = await Axios('http://localhost:1337/homechance-2');
+  return {props:{data: request.data, intro: requestIntro.data, chance1: requestChance1.data, chance2: requestChance2.data}};
 }
 
