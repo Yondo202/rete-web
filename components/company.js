@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { GiSupersonicArrow, GiStairsGoal, GiMirrorMirror, GiSwordsPower } from 'react-icons/gi';
-import { AiFillDashboard } from 'react-icons/Ai';
+import { AiFillDashboard } from 'react-icons/ai';
 import { MdPhotoSizeSelectLarge } from 'react-icons/md';
 import { TiSocialYoutubeCircular } from 'react-icons/ti'
 import { motion } from 'framer-motion'
