@@ -4,7 +4,25 @@ import { Container, Row, Col } from 'react-bootstrap';
 import FacebooklLogin from './facebookLogin'
 import { MdPhotoSizeSelectLarge, MdContentCopy } from 'react-icons/md';
 import { FcCameraAddon, FcCollaboration, FcBullish } from 'react-icons/fc';
+import { motion } from 'framer-motion'
 
+let easing = [0.5, 0.9, 0.16, 0.95];
+const textVariants = {
+  exit: { y: -100, opacity: 0, transition: { duration: 0.9, ease: easing } },
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: { delay: 0.2, duration: 0.9, ease: easing }
+  }
+};
+const textVariants2 = {
+  exit: { y: 100, opacity: 0, transition: { duration: 0.9, ease: easing } },
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: { delay: 0.2, duration: 0.9, ease: easing }
+  }
+};
 
 class influencer extends Component {
 
@@ -19,8 +37,12 @@ class influencer extends Component {
           <div className="infCover" style={{ backgroundImage: `url(${require("../image/inf4.jpg")})` }}>
           </div>
           <div className="textPar">
-            <h1>{data.head.Title}</h1>
-            <h5>{data.head.Desc}</h5>
+            <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
+              <h1>{data.head.Title}</h1>
+            </motion.div>
+            <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants2}>
+              <h5>{data.head.Desc}</h5>
+            </motion.div>
             {/* <FacebooklLogin /> */}
           </div>
         </div>
@@ -76,7 +98,7 @@ class influencer extends Component {
                   <Col md={4} key={i} >
                     <div className="infImg" >
                       <div className="imgBack">
-                        <div className="img" style={{ backgroundImage: `url('http://localhost:1337${el.img.url}')` }}>
+                        <div className="img" style={{ backgroundImage: `url('http://rete-admin.herokuapp.com${el.Img.url}')` }}>
 
                         </div>
                       </div>

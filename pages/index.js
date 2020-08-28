@@ -37,10 +37,10 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps(){
-  const request = await Axios('http://localhost:1337/sliders');
-  const requestIntro = await Axios('http://localhost:1337/intro');
-  const requestChance1 = await Axios('http://localhost:1337/homechance-1');
-  const requestChance2 = await Axios('http://localhost:1337/homechance-2');
+  const request = await Axios('http://rete-admin.herokuapp.com/sliders');
+  const requestIntro = await Axios('http://rete-admin.herokuapp.com/intro');
+  const requestChance1 = await Axios('http://rete-admin.herokuapp.com/homechange-1');
+  const requestChance2 = await Axios('http://rete-admin.herokuapp.com/homechange-2');
   return {props:{data: request.data, intro: requestIntro.data, chance1: requestChance1.data, chance2: requestChance2.data}};
 }
 

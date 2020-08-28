@@ -42,7 +42,7 @@ class chances extends Component {
                             <ScrollAnimation
                                 animateIn='fadeIn'
                                 animateOut='fadeOut'>
-                                <img src={`http://localhost:1337${data1.img.url}`} />
+                                <img src={`http://rete-admin.herokuapp.com${data1.Img.url}`} />
                             </ScrollAnimation>
                         </Col>
 
@@ -53,7 +53,7 @@ class chances extends Component {
                             <ScrollAnimation
                                 animateIn='fadeIn'
                             >
-                                <img src={`http://localhost:1337${data2.img.url}`} />
+                                <img src={`http://rete-admin.herokuapp.com${data2.Img.url}`} />
                             </ScrollAnimation>
                         </Col>
                         <Col md={6}>

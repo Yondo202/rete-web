@@ -30,8 +30,8 @@ class influencer extends Component {
 export default influencer;
 
 export async function getServerSideProps(){
-    const requestHead = await Axios('http://localhost:1337/infhead ')
-    const requestBody = await Axios('http://localhost:1337/influencerbodies')
+    const requestHead = await Axios('http://rete-admin.herokuapp.com/infhead')
+    const requestBody = await Axios('http://rete-admin.herokuapp.com/influencerbodies')
     return {props: {head: requestHead.data, body1: requestBody.data}}
 }
 

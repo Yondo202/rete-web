@@ -30,7 +30,7 @@ export default company;
 
 
 export async function getServerSideProps() {
-    const reqCompHead = await Axios('http://localhost:1337/companyhead');
-    const reqCompBody = await Axios('http://localhost:1337/companybodies');
+    const reqCompHead = await Axios('http://rete-admin.herokuapp.com/companyhead');
+    const reqCompBody = await Axios('http://rete-admin.herokuapp.com/companybodies');
     return {props: {head: reqCompHead.data, body1: reqCompBody.data}}
 }

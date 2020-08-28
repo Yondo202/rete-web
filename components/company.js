@@ -4,7 +4,25 @@ import { GiSupersonicArrow, GiStairsGoal, GiMirrorMirror, GiSwordsPower } from '
 import { AiFillDashboard } from 'react-icons/Ai';
 import { MdPhotoSizeSelectLarge } from 'react-icons/md';
 import { TiSocialYoutubeCircular } from 'react-icons/ti'
+import { motion } from 'framer-motion'
 
+let easing = [0.5, 0.9, 0.16, 0.95];
+const textVariants = {
+    exit: { y: -100, opacity: 0, transition: { duration: 0.9, ease: easing } },
+    enter: {
+        y: 0,
+        opacity: 1,
+        transition: { delay: 0.2, duration: 0.9, ease: easing }
+    }
+};
+const textVariants2 = {
+    exit: { y: 100, opacity: 0, transition: { duration: 0.9, ease: easing } },
+    enter: {
+        y: 0,
+        opacity: 1,
+        transition: { delay: 0.2, duration: 0.9, ease: easing }
+    }
+};
 
 class company extends Component {
     render() {
@@ -18,9 +36,13 @@ class company extends Component {
 
                     </div>
                     <div className="textPar">
-                        <h1>{data.head.Title}</h1>
-                        <h5>{data.head.SmTitle}</h5>
-                        <p>{data.head.Desc}</p>
+                        <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
+                            <h1>{data.head.Title}</h1>
+                        </motion.div>
+                        <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants2}>
+                            <h5>{data.head.SmTitle}</h5>
+                            <p>{data.head.Desc}</p>
+                        </motion.div>
                     </div>
 
                 </div>
@@ -94,17 +116,17 @@ class company extends Component {
 
 
                             {data.body1.map((el, i) => {
-                                return(
+                                return (
                                     <Col md={4} key={i}>
-                                    <div className="imgBorder" style={{ textAlign: "center" }}>
-                                        <img src={`http://localhost:1337${el.img.url}`} />
-                                    </div>
-                                    <div>
-                                        <p className="title">{el.Title}</p>
-                                        <p className="desc">{el.Desc}</p>
-                                    </div>
-                                </Col>
-                                )   
+                                        <div className="imgBorder" style={{ textAlign: "center" }}>
+                                            <img src={`http://rete-admin.herokuapp.com${el.Img.url}`} />
+                                        </div>
+                                        <div>
+                                            <p className="title">{el.Title}</p>
+                                            <p className="desc">{el.Desc}</p>
+                                        </div>
+                                    </Col>
+                                )
                             })}
 
 

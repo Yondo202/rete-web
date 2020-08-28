@@ -24,6 +24,6 @@ const about = (props) => {
 export default about;
 
 export async function getServerSideProps(){
-    const request = await axios('http://localhost:1337/about');
+    const request = await axios('http://rete-admin.herokuapp.com/about');
     return {props:{data: request.data}}
 }
