@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { GiSupersonicArrow, GiStairsGoal, GiMirrorMirror, GiSwordsPower } from 'react-icons/gi';
-import { AiFillDashboard } from 'react-icons/ai';
-import { MdPhotoSizeSelectLarge } from 'react-icons/md';
+import { MdPhotoSizeSelectLarge,MdDashboard } from 'react-icons/md';
 import { TiSocialYoutubeCircular } from 'react-icons/ti'
 import { motion } from 'framer-motion'
 
@@ -69,7 +68,7 @@ class company extends Component {
                         </Col>
                         <Col md={4} style={{ paddingLeft: 0, paddingRight: 0 }}>
                             <div className="Box">
-                                <AiFillDashboard />
+                                <MdDashboard />
                                 <p className="smTitle">ХЭРЭГЛЭХЭД ХЯЛБАР ДАШБОАРД</p>
                                 <p className="smDesc">Бүх сурталчилгаа, контент саналуудын статистик, зарцуулсан мөнгөн дүнг нийтэд нь болон сурталчилгаа тус бүрээр хянах боломжтой</p>
                             </div>
