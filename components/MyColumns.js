@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import { GiSupersonicArrow, GiStairsGoal, GiMirrorMirror, GiTakeMyMoney, GiOrbDirection } from 'react-icons/gi';
-import { AiFillDashboard, AiOutlineAreaChart } from 'react-icons/Ai';
+import { AiFillDashboard, AiOutlineAreaChart } from 'react-icons/ai';
 import { MdPhotoSizeSelectLarge, MdGroupAdd, MdSecurity } from 'react-icons/md';
 import { TiSocialYoutubeCircular } from 'react-icons/ti'
 import { FcStatistics } from 'react-icons/fc'
